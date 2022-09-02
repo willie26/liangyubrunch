@@ -11,50 +11,49 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   
-  <style>
+<style>
     * {
       margin: 0;
       padding: 0;
       border: 0;
       text-decoration: none;
       color: unset;
+      box-sizing: border-box;
     }
 
     body {
       position: relative;
     }
-
-    body * {
-    
-    }
+   
+ 
     body, ul, li {
   margin: 0;
 }
-    nav {
-      width: 100%;
-      height: 5vw;
-      display: flex;
-      font-size: 30px;
-      align-items: center;
-      background-color: bisque;
-      position: fixed;
-      top: 0%;
-      left: 0;
-      z-index: 11;
+ 
 
+  #banner {
+    width: 100%;
+    height: 50vw;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
 
+  #banner img{
+    width: 80%;
+    height: 80%;
+  } */
 
-    .header{
+
+  .header{
       width: 100%;
-      
-      background: #eee;
       display: flex;
       flex-direction: row;
       align-items: center;
-      box-shadow: 0px 1px 3px #00000088;}
+      box-shadow: 0px 1px 3px ;}
 
   .header::after {
     
@@ -90,28 +89,26 @@
       top:10px;
     }
 
-    #logo {
-      float: left;
-      width: 140px;
-      height: 130px;
-    }
+   
 
     input {
   display: none;
-  
 }
+
 input:checked ~ .menu {
   display: block;
   max-height: 300px;
 }
+
 /* 漢堡按鈕 */
 label {position: relative;
   float: right;
-  padding-top: 60px;
+  padding-top: 50px;
   line-height: 50px;
-  cursor: pointer;}
+  cursor: pointer;
+}
 
-  .marqee {
+.marqee {
 	height: 5em;
 	margin: 0 auto;
 	overflow: hidden; 
@@ -130,8 +127,9 @@ label {position: relative;
 	white-space: nowrap;
 	font-weight: lighter;
   font-size: 25px;
-	color:black;
+	color:gray;
 }
+
 
 @keyframes marqee {
 	0% {
@@ -146,109 +144,124 @@ label {position: relative;
 }
 
 
-  .menu {position: absolute;
+  .menu {
+    position: absolute;
     top: 30%;
     left: 20%;
-   max-height: 0;
-  overflow: hidden;
-  transition: .2s; /* 動畫秒數 */
-  
-  background: #fff;}
+    max-height: 0;
+    overflow: hidden;
+    transition: .2s; /* 動畫秒數 */
+    z-index: 99;
+  }
 
 
   .menu li {
    
     display: flex;
     align-items: flex-end;
-    background-color: rgb(213, 156, 121);
+    background-color: rgb(206, 158, 128);
     text-align: center;
-    border-bottom: 1px solid #efefef;}
+    border-bottom: 1px solid #efefef;
+  }
 
   .menu  li  a {
-
-    
-      display: block;
-      line-height: 50px;
-      font-size: 18px;
-      color: #5d5d5d;}
+    display: block;
+    line-height: 50px;
+    font-size: 18px;
+    color: white;
+  }
 
   .menu  li  a :hover {
-        background: #5d5d5d;
-        color: #fff;
-      }
+    background: #5d5d5d;
+    color: #fff;
+  }
+
+  .rest{
+    width: 100%;
+    height: 10vh;
+    background-color: #fff;   
+  }
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 380px) {
-      
-  #banner {
-      padding-top: 20%;
+
+ 
+nav {
       width: 100%;
-      height: 50vw;
-      background-color: bisque;
-
-    }
-
-    /* .swiper {
-      width: 100%;
-      height: 100%;
-    } */
-
-    .swiper-slide {
-      text-align: center;
-
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
+      height: 15vw;
       display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
+      font-size: 30px;
       align-items: center;
+      background-image:linear-gradient(to right, rgb(72, 112, 146),  rgba(255, 255, 255, 0));
+      position: fixed;
+  }
+
+  #logo {
+      float: left;
+    }
+   
+  
+    .fb {
+      left: 70%;
     }
 
-    .swiper-slide img {
-      display: block;
-      width: 90%;
+    .ig {
+      left:82%;
+    }
+
+/* 380-1200的關於亮宅 */
+  .about-img{
+      width: 100%;
+      height: 80vh;
+      background-color: rgb(185, 204, 233);
+      background-image: url(./img/IMG_6009.JPG);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+    .about-title1{
+      font-size: 250%;
+      line-height: 200%;
+      padding-top: 70px;
+    }
+    #text3{
+      font-size: 150%;
+      line-height: 200%;
+    }
+    #text4{
+      font-size: 150%;
+      line-height: 200%;
+    }
+    .text{
+      display: none;
     }
     
-    /* #menu {
-      width: 100%;
-      height: 60vh;
-      background-color: bisque;
-    } */
+    
+
+    /* 380-1200的menu */
     #menu .left img {
       display: none;
-      /* width: 100px;
-      height: 200px; */
       position: absolute;
-      /* top: calc(50% - 50px);
-      left: 50%; */
+    
     }
 
     #menu {
-      width: 100%;
       height: 50vh;
-      background-color: bisque;
     }
 
     #menu .left {
-      /* width: 10%;
-      height: 100%; */
       float: left;
       position: relative;
     }
-/* 
-    #menu .left img {
-      width: 100px;
-      height: 200px;
-      position: absolute;
-      top: calc(50% - 50px);
-      left: 50%;
-    } */
 
     #menu .left p {
       writing-mode: vertical-rl;
@@ -258,220 +271,8 @@ label {position: relative;
       border: 2px solid;
       font-size: 40px;
     }
-    /* #menu .swiper {
-      margin-left: 5%;
-      width: 95%;
-      height: 100%;
-    } */
-    /* #menu .swiper-slide img {
-      display: block;
-      width:95%;
-      height: 80%;
-      object-fit: contain;
-    } */
-
-    #about {
-      /* width: 70vw; */
-      height: 60vw;
-      background-image: url(./img/品牌-01.jpg);
-      background-position: center;
-      background-size:cover;
-      background-repeat: no-repeat;
-      position: relative;
-    }
-
-    #about .title {
-      font-size: 100%;
-      font-style: italic;
-      position: absolute;
-      left: 44%;
-      top: 8%;
-    }
-
-    #about .text1 {
-      max-width: 250px;
-      font-size:10px;
-      font-style: italic;
-      position: absolute;
-      left: 22%;
-      top: 20%;
-    }
-
-    #about .text2 {
-      max-width: 250px;
-      font-size: 10px;
-      font-style: italic;
-      position: absolute;
-      left: 21%;
-      top: 50%;
-    }
-
-    #attraction {
-      width: 100%;
-      height: 140vh;
-    }
-
-    .title-text {
-      font-size: 50px;
-    }
-
-    #pic {
-      /* width: 70%; */
-      height: 135vh;
-      background-color: bisque;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    #pic h3 {
-      padding-top: 5%;
-      font-size: 200%;
-      text-align: center;
-    }
-
-
-    .lightbox {
-      /* Default to hidden */
-      display: none;
-      /* Overlay entire screen */
-      position: fixed;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      /* A bit of padding around image */
-      padding: 1em;
-    }
-
-    /* Unhide the lightbox when it's the target */
-    .lightbox:target {
-      display: block;
-
-    }
-
-    .lightbox span {
-      position: relative;
-      /* Full width and height */
-      display: block;
-      width: 100%;
-      height: 100%;
-      /* Size and position background image */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    .lightbox-text {
-      font-size: 250%;
-      position: absolute;
-      top: 10%;
-      left: 5%;
-    }
-
-    .Official {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 150%;
-     
-    }
-
   
-    #footer {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      background: rgb(37, 139, 176);
-      /* width: 70%; */
-      height: 40vh;
-    }
-
-    #footer-text {
-
-      text-align: center;
-      padding-top: 9%;
-    }
-
-    #footer-content {
-
-      font-size: 200%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    #footer-contact {
-      width: 100%;
-      height: 50vw;
-      font-size: 100%;
-
-    }
-
-    #phone {
-      display: flex;
-      flex-direction: row;
-    }
-
-    #address {
-      display: flex;
-      flex-direction: row;
-    }
-
-    #time {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .footer-contact-title {
-
-      height: 10vh;
-      padding-right: 10%;
-      padding-left: 10%;
-
-    }
-  }
-  @media screen and (min-width:580px) {
-
-      #about .title {
-      font-size: 200%;
-      font-style: italic;
-      position: absolute;
-      left: 45%;
-      top: 10%;
-    }
-
-    #about .text1 {
-      max-width: 60%;
-      font-size: 100%;
-      font-style: italic;
-      position: absolute;
-      left: 25%;
-      top: 28%;
-    }
-
-    #about .text2 {
-      max-width: 60%;
-      font-size: 100%;
-      font-style: italic;
-      position: absolute;
-      left: 25%;
-      top: 53%;
-    }
-    /* #menu .center {
-      width: 90%;
-      height: 0%;
-      float: right;
-
-    } */
-
-
     #menu .swiper {
-      width: 100%;
       height: 100%;
     }
 
@@ -492,185 +293,7 @@ label {position: relative;
 
     #menu .swiper-slide img {
       display: block;
-      width: 100%;
-      height: 75%;
-      object-fit: contain;
-    }
-
-
-    #menu .swiper-pagination-bullet {
-      width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 30px));
-      height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 30px));
-      --swiper-theme-color: #805803be;
-    }
-
-     }
-  @media screen and (min-width:850px) {
-
-      #about .title {
-      font-size: 300%;
-      font-style: italic;
-      position: absolute;
-      left: 45%;
-      top: 10%;
-    }
-
-    #about .text1 {
-      max-width: 70%;
-      font-size: 150%;
-      font-style: italic;
-      position: absolute;
-      left: 25%;
-      top: 28%;
-    }
-
-    #about .text2 {
-      max-width: 70%;
-      font-size: 150%;
-      font-style: italic;
-      position: absolute;
-      left: 25%;
-      top: 53%;
-    }
-
-     }
-  
-
-/* 當碰到nav變成漢堡條 */
- @media screen and (min-width: 1200px) {
-  label {
-    display: none;
-  }
-  #banner {
-      padding-top: 5%;
-      width: 100%;
-      height: 45vw;
-    }
-  .menu {
-    float: right;
-    clear: none;
-    max-height: 50px;
-    background: #eee;}
-.menu li {
-      display: inline-block;}
-      .menu li a {
-        padding: 0 15px;  
-      }
-
-      .fb {
-      width: 50px;
-      height: 50px;
-      background-image: url(./img/fb.png);
-      background-size: cover;
-      display: unset;
-      position: absolute;
-      left:90%;
-      top:20%;
-     
-    }
-
-    .ig {
-      width: 50px;
-      height: 50px;
-      background-image: url(./img/ig.png);
-      background-size: cover;
-      display: unset;
-      position: absolute;
-      left: 95%;
-      top:20%;
-    }
-
-    #menu .left {
-      width: 10%;
-      height: 100%;
-      float: left;
-      position: relative;
-    }
-
-    #menu .left img {
-      width: 100px;
-      height: 200px;
-      position: absolute;
-      top: calc(50% - 50px);
-      left: 50%;
-    }
-
-    #menu .left p {
-      position: absolute;
-      top: 270px;
-      left: 48%;
-      border: 2px solid;
-      font-size: 40px;
-    }
-    
- 
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-    #menu {
-      width: 100%;
-      height: 90vh;
-      background-color: bisque;
-    }
-
-    #menu .left {
-      width: 10%;
-      height: 100%;
-      float: left;
-      position: relative;
-    }
-
-    #menu .left img {
-      display: unset;
-      width: 100px;
-      height: 200px;
-      position: absolute;
-      top: calc(50% - 50px);
-      left: 50%;
-    }
-
-    #menu .left p {
-      writing-mode: unset;
-      position: absolute;
-      top: 270px;
-      left: 48%;
-      border: 2px solid;
-      font-size: 40px;
-    }
-
-    #menu .center {
-      width: 90%;
-      height: 90%;
-      float: right;
-
-    }
-
-
-    #menu .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    #menu .swiper-slide {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-
-    #menu .swiper-slide img {
-      display: block;
-      width: 100%;
+      width: 80%;
       height: 80%;
       object-fit: contain;
     }
@@ -683,65 +306,16 @@ label {position: relative;
     }
 
 
-    #about {
-      width: 100%;
-      height: 50vw;
-      background-image: url(./img/品牌-01.jpg);
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: relative;
-    }
 
-    #about .title {
-      font-size: 400%;
-      font-style: italic;
-      position: absolute;
-      left: 45%;
-      top: 10%;
-    }
-
-    #about .text1 {
-      max-width: 60%;
-      font-size: 200%;
-      font-style: italic;
-      position: absolute;
-      left: 25%;
-      top: 24%;
-    }
-
-    #about .text2 {
-      max-width: 60%;
-      font-size: 200%;
-      font-style: italic;
-      position: absolute;
-      left: 25%;
-      top: 53%;
-    }
-
-
-    #attraction {
-      width: 100%;
-      height: 100vh;
-    }
+    /* 周邊景點 */
 
     .title-text {
-      font-size: 50px;
+      font-size: 30px;
     }
 
     #pic {
-      height: 100vh;
-      background-color: bisque;
-      display: flex;
-      flex-direction: unset;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    #pic h3 {
-      padding-top: 5%;
-      font-size: 200%;
-      text-align: center;
+      background-color: rgb(205, 217, 235);
+      font-size: 100%;
     }
 
 
@@ -805,60 +379,502 @@ label {position: relative;
       font-size: 150%;
     }
 
-
-
-    #footer {
+    /* footer */
+    #footer{
+      width: 100%;
+      background-color: rgb(145, 219, 253);
+      background-image: url(./img/背景質感.jpg);
+    }
+    .footer-top{
+      width: 150px;
+      font-size: 25px;
+      margin: auto;
+      font-weight: bold;
+      position: relative;
+    }
+    .footer-top::before{
+      content: '';
+      width: 100px;
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      bottom: -2px;
+    }
+    .footer-middle{
+      width: 100%;
+      
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding-top: 10px;
+    }
+    .footer-left-1{
       display: flex;
       align-items: center;
-      flex-direction: column;
-      background: rgb(37, 139, 176);
-      width: 100%;
-      height: 40vh
     }
-
-    #footer-text {
-
+    .footer-left-2{
+      display: flex;
+      margin-top: 5px;
+    }
+    .phone{
+      margin-left: 10px;
+      letter-spacing: 2px;
+    }
+    .number{
+      margin-left: 10px;
+      letter-spacing: 3px;
+    }
+    .address{
+      margin-left: 10px;
+      letter-spacing: 2px;
+    }
+    .footer-right{
+      width: 300px;
+    }
+    .footer-right-1{
+      display: flex;
+      align-items: center;
+    }
+    .open{
+      margin-left: 10px;
+    }
+    .time{
+      margin-top: 5px;
+      margin-left: 25px;
+      letter-spacing: 2px;
+    }
+    .weekend{
+      margin-top: 5px;
+    }
+    .mon{
+      margin-top: 5px;
+    }
+    .footer-bottom{
+      margin-top: 5px;
+    }
+    .copyright{
       text-align: center;
-      padding-top: 9%;
     }
+  
+}
+    
 
-    #footer-content {
+  
 
-      font-size: 200%;
+
+
+/* 當碰到nav變成漢堡條 */
+ @media screen and (min-width: 1200px) {
+
+  label {
+    display: none;
+  }
+
+  nav {
+      width: 100%;
+      height: 6vw;
       display: flex;
-      flex-direction: row;
-      justify-content: center;
+      font-size: 30px;
+      align-items: center;
+      background-image:linear-gradient(to right, rgb(72, 112, 146),  rgba(255, 255, 255, 0));
+      position: fixed;
+      top: 0%;
+      left: 0;
+      z-index: 11;
+
     }
 
-    #footer-contact {
-      width: 50%;
-      height: 50vw;
-      font-size: 150%;
-
+    .fb {
+      width: 50px;
+      height: 50px;
+      background-image: url(./img/fb.png);
+      background-size: cover;
+      display: unset;
+      position: absolute;
+      left:90%;
+      top:20%;
+     
     }
 
-    #phone {
-      display: flex;
-      flex-direction: row;
+    .ig {
+      width: 50px;
+      height: 50px;
+      background-image: url(./img/ig.png);
+      background-size: cover;
+      display: unset;
+      position: absolute;
+      left: 95%;
+      top:20%;
     }
 
-    #address {
-      display: flex;
-      flex-direction: row;
+    #logo {
+      float: left;
+      width: 130px;
+      height: 130px;
     }
 
-    #time {
-      display: flex;
-      flex-direction: row;
+
+  /* 1200以上關於亮宅 */
+    .text-box1{
+      display: none;
+    }
+    #about{
+      width: 100%;
+      height: 100vh;
     }
 
-    .footer-contact-title {
-
+    .about-title{
+      font-size: 400%;
+      text-align: center;
+      width: 100%;
       height: 10vh;
-      padding-right: 10%;
-      padding-left: 20%;
+    }
+
+    .about-content{
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .about-img{
+      padding-top: 4.5%;
+      padding-left: 2%;
+      width: 50%;
+      height: 80vh;
+      background-image: url(./img/IMG_6009.JPG);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
 
     }
+
+
+
+    .text{
+      width: 50%;
+      height: 90vh;
+      padding-left: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: rgb(213, 156, 121);
+    }
+
+
+    .text-box{
+      width: 90%;
+      height: 80vh;
+      padding: 5%;
+      display: flex;
+      flex-direction: column;}
+
+    #text1{
+      font-size: 200%;
+      padding-bottom: 5%;
+      line-height: 200%;
+      letter-spacing: 5%;
+    }
+
+    #text2{
+      font-size: 200%;
+      line-height: 200%;
+      letter-spacing: 5%;
+    }
+
+
+
+
+  /* 1200以上menu  */
+    .menu {
+      float: right;
+      clear: none;
+      max-height: 50px;
+    }
+    .menu li {
+      display: inline-block;
+    }
+    .menu li a {
+      padding: 0 15px;  
+    }
+
+
+
+
+
+      /* 菜單 */
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    #menu {
+      width: 100%;
+      height: 90vh;
+      background-image: url(./img/menu背景.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #menu .left {
+      width: 10%;
+      height: 100%;
+      float: left;
+      position: relative;
+    }
+
+    #menu .left img {
+      display: unset;
+      width: 100px;
+      height: 200px;
+      position: absolute;
+      top: 260px;
+      left: 360px;
+      z-index: 10;
+    }
+
+    #menu .left p {
+      writing-mode: unset;
+      position: absolute;
+      top: 200px;
+      left: 350px;
+      border: 2px solid;
+      font-size: 40px;
+    }
+
+    #menu .center {
+      width: 90%;
+      height: 90%;
+      float: right;
+
+    }
+
+    #menu .swiper {
+      height: 100%;
+    }
+
+    #menu .swiper-slide {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    #menu .swiper-slide img {
+      display: block;
+      object-fit: contain;
+    }
+
+    #menu .swiper-pagination-bullet {
+      width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 30px));
+      height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 30px));
+      --swiper-theme-color: #805803be;
+    }
+
+
+
+
+
+    /* 1200以上周邊景點 */
+
+    #attraction {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .title-text {
+      font-size: 50px;
+    }
+
+    #pic {
+      height: 100vh;
+      background-color: rgb(205, 217, 235);
+      display: flex;
+      flex-direction: unset;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 150%;
+    }
+
+
+    .lightbox {
+      /* Default to hidden */
+      display: none;
+      /* Overlay entire screen */
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      /* A bit of padding around image */
+      padding: 1em;
+    }
+
+    /* Unhide the lightbox when it's the target */
+    .lightbox:target {
+      display: block;
+
+    }
+
+    .lightbox span {
+      position: relative;
+      /* Full width and height */
+      display: block;
+      width: 100%;
+      height: 100%;
+      /* Size and position background image */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .lightbox-text {
+      font-size: 250%;
+      position: absolute;
+      top: 10%;
+      left: 5%;
+    }
+
+    .ind ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .ind ul div {
+      padding-right: 10%;
+      padding-top: 2%;
+    }
+
+
+    .Official {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 150%;
+    }
+
+    
+  /* 1200以上的footer */
+    #footer{
+      width: 100%;
+      background-image:linear-gradient(to right, rgb(72, 112, 146),  rgba(255, 255, 255, 0));
+      background-image: url(./img/背景質感.jpg);
+    }
+    .footer-top{
+      width: 150px;
+      font-size: 25px;
+      margin: auto;
+      font-weight: bold;
+      position: relative;
+    }
+    .footer-top::before{
+      content: '';
+      width: 100px;
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      bottom: -2px;
+    }
+    .footer-middle{
+      width: 100%;
+      
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding-top: 10px;
+    }
+    .footer-left-1{
+      display: flex;
+      align-items: center;
+    }
+    .footer-left-2{
+      display: flex;
+      margin-top: 5px;
+    }
+    .phone{
+      margin-left: 10px;
+      letter-spacing: 2px;
+    }
+    .number{
+      margin-left: 10px;
+      letter-spacing: 3px;
+    }
+    .address{
+      margin-left: 10px;
+      letter-spacing: 2px;
+    }
+    .footer-right{
+      width: 300px;
+    }
+    .footer-right-1{
+      display: flex;
+      align-items: center;
+    }
+    .open{
+      margin-left: 10px;
+    }
+    .time{
+      margin-top: 5px;
+      margin-left: 25px;
+      letter-spacing: 2px;
+    }
+    .weekend{
+      margin-top: 5px;
+    }
+    .mon{
+      margin-top: 5px;
+    }
+    .footer-bottom{
+      margin-top: 5px;
+    }
+    .copyright{
+      text-align: center;
+    }
+  
+  
+.text{
+  height: 90vh;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;}
+
+
+.text-box{
+  width: 90%;
+  height: 80vh;
+  padding: 5%;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;}
+
+#text1{
+  font-size: 200%;
+  padding-bottom: 5%;
+  line-height: 200%;
+  letter-spacing: 5%;}
+
+#text2{
+  font-size: 200%;
+  line-height: 200%;
+  letter-spacing: 5%;
+  }
+
   }
 
 
@@ -872,36 +888,11 @@ label {position: relative;
     #menu .swiper-pagination-bullet {
       width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 30px));
       height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 30px));
-      --swiper-theme-color: #805803be;
-    }
-    @media screen and (min-width: 1600px) {
-      #about .title {
-      font-size: 400%;
-      font-style: italic;
-      position: absolute;
-      left: 45%;
-      top: 10%;
+      --swiper-theme-color: #0b6ba7be;
+      
     }
 
-    #about .text1 {
-      max-width: 60%;
-      font-size: 280%;
-      font-style: italic;
-      position: absolute;
-      left: 25%;
-      top: 24%;
-    }
-
-    #about .text2 {
-      max-width: 60%;
-      font-size: 280%;
-      font-style: italic;
-      position: absolute;
-      left: 25%;
-      top: 53%;
-    }
-
-    }
+  
 
 
 
@@ -914,14 +905,14 @@ label {position: relative;
     <div class="header">
     <div id="logo">
       <a href="#banner">
-        <img src="./img/logo.png" alt="" style="width: 150px;height: 150px; ">
+        <img src="./img/logo.png" style="width: 130px;height: 130px; ">
       </a>
     </div>
     <label for="switch">☰</label>
     <input type="checkbox" id="switch">
     <ul class="menu">
+      <li><a href="#about" class="link">關於亮宅</a></li>
       <li><a href="#menu" class="link">最新菜單</a></li>
-        <li><a href="#about" class="link">品牌理念</a></li>
           <li><a href="#attraction" class="link">周邊景點</a></li>
             <li><a href="#footer" class="link">聯絡我們</a></li>
   </ul>
@@ -934,59 +925,68 @@ label {position: relative;
   </nav>
 
 
-  <div id="banner">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./img/banner1-2.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="./img/banner4-2.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="./img/banner2-2.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="./img/banner5-2.png" alt="">
-        </div>
-        <div class="swiper-slide"><img src="./img/banner3-2.png" alt=""></div>
-
-      </div>
-    </div>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
+  <div id="banner" style="padding-top:10% ;">
+  <img src="./img/BANNER 加背景_工作區域 1.png" >
   </div>
-
-
-
-  <div id="menu">
+  <div class="rest">
     <div class="marqee">
 			<ul>
 				<li>最新消息:亮宅即將開啟新活動，也會有中秋檔期活動，敬啟期待</li>
 			</ul>
 		</div>
+  </div>
+    
+
+  <div id="about">
+   
+
+    <div class="about-content">
+    
+          <div class="about-img">
+            <div class="text-box1"> 
+              <div class="about-title1">關於亮宅</div>
+             <div  id="text3" data-aos="fade-right">
+             「亮」取自於老闆的名字，「宅」則代表著家渴望建立起像家一樣隨性自由、舒適慵懶的空間。
+             <br>
+             「把夢想化為現實」是老闆的人生理念，也是一輩子追求的目標。</br>
+             </div>
+           <div id="text4" data-aos="fade-left">
+
+             店裡手工製作蛋餅及私房菜單，以滿足客人味蕾，期望能在這裡找到人情味，提供每個旅人一個溫暖的港灣來療癒自己。
+             </div></div>  
+          
+              </div>
+            <div class="text"> 
+              <div class="text-box"> 
+                 <div class="about-title">關於亮宅</div>
+                <div  id="text1" data-aos="fade-right">
+                「亮」取自於老闆的名字，「宅」則代表著家渴望建立起像家一樣隨性自由、舒適慵懶的空間。
+                <br>
+                「把夢想化為現實」是老闆的人生理念，也是一輩子追求的目標。</br>
+                </div>
+              <div id="text2" data-aos="fade-left">
+
+                店裡手工製作蛋餅及私房菜單，以滿足客人味蕾，期望能在這裡找到人情味，提供每個旅人一個溫暖的港灣來療癒自己。
+                </div></div>  
+             
+              </div> 
+  </div>
+</div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+
+
+
+
+<!-- meun start -->
+  <div id="menu">
+    
     <div class="left">
       <div class="topic">
         <a href="#menu-sample">
@@ -1009,7 +1009,8 @@ label {position: relative;
     <div class="center">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="./img/太陽蛋拼盤.jpg">
+          <div class="swiper-slide">
+            <img src="./img/太陽蛋拼盤.jpg">
             <div></div>
           </div>
           <div class="swiper-slide"><img src="./img/手作燒肉.jpg"></div>
@@ -1042,28 +1043,16 @@ label {position: relative;
         });
       </script>
     </div>
-    <div class="right"></div>
+ 
   </div>
+  
+
+
+  <!-- <div class="rest"></div> -->
 
 
 
-  <div id="about">
-    <div class="title">品牌理念</div>
-    <div class="text1" data-aos="fade-right">
-      坐落在台中后里的早午餐-亮宅，「亮」取自於老闆的名字，「宅」則代表著家渴望建立起像家一樣隨性自由、舒適慵懶的空間。「把夢想化為現實」是老闆常掛在嘴邊的
-    </div>
-    <div class="text2" data-aos="fade-left">
-
-      店裡手工製作的蛋餅及私房菜單，滿足客人空虛的靈魂，期望他們能在這裡找到一絲救贖
-      如同老闆的夢想，這個家提供每個旅人一個溫暖的港灣來療癒自己
-    </div>
-
-  </div>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  
 
 
 
@@ -1079,12 +1068,11 @@ label {position: relative;
       <div class="attractions">
         <a href="#img1">
           <img class="pics" src="https://www.fullon-hotels.com.tw/upload/ad_fac_list/ym_twL_ad_fac_20H04_87ii9czb5v.jpg"
-            style="width: 300px;height: 200px;">
+            style="width: 600px;height: 500px;">
 
         </a>
         <span class="Official ">
-          <h3>麗寶樂園</h3>
-          <a href="https://www.lihpaoresort.com/LihpaolandApp">前往官網</a>
+          <a href="https://www.lihpaoresort.com/LihpaolandApp">麗寶樂園</a>
         </span>
       </div>
 
@@ -1092,24 +1080,22 @@ label {position: relative;
         <a href="#img2">
           <img class="pics"
             src="https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/5722456/401456_991633.png"
-            style="width: 300px;height: 200px;">
+            style="width: 600px;height: 500px;">
 
         </a>
         <div class="Official ">
-          <h3>后里馬場</h3>
-          <a href="https://www.houlimamaland.tw/">前往官網</a>
+          <a href="https://www.houlimamaland.tw/">后里馬場</a>
         </div>
       </div>
 
       <div class="attractions">
         <a href="#img3">
           <img class="pics" src="https://www.taisugar.com.tw/upload/RelPic/Attractions/205/636605282207567010.jpg"
-            style="width: 300px;height: 200px;">
+            style="width: 600px;height: 500px;">
 
         </a>
         <span class="Official ">
-          <h3>月眉糖廠</h3>
-          <a href="https://www.taisugar.com.tw/chinese/Attractions_detail.aspx?n=10048&s=191&p=0">前往官網</a>
+          <a href="https://www.taisugar.com.tw/chinese/Attractions_detail.aspx?n=10048&s=191&p=0">月眉糖廠</a>
         </span>
       </div>
 
@@ -1134,55 +1120,49 @@ label {position: relative;
     </a>
     <a href="#attraction" class="lightbox" id="img3">
       <span style="background-image: url('./月眉糖廠.jpg')">
-
+      </span>
+    </a>
   </div>
-
-  </span>
-  </a>
   </div>
 
-  </div>
-  </div>
+<!-- <div class="rest"></div> -->
+
 
   <!-- footer start -->
   <div id="footer">
-    <div id="footer-content">
-      <div id="footer-logo">
-        <img src="./img/logo.png" style="width: 100px;height: 100px" ;>
-      </div>
-      <div id="footer-text">亮宅Brunch</div>
-    </div>
-
-
-    <div id="footer-contact">
-
-      <div id="phone">
-        <div class="footer-contact-title">
-          電話 0926961432</div>
-        <div class="footer-contact-content">
-          地址 台中市后里區安眉路133號
+    <div class="footer-top">聯絡我們</div>
+    <div class="footer-middle">
+      <div class="footer-left">
+        <div class="footer-left-1">
+          <i class="bi bi-telephone"></i>
+          <div class="phone">連絡電話</div>
+          <div class="number">0926961432</div>
+        </div>
+        <div class="footer-left-2">
+          <i class="bi bi-geo-alt"></i>
+          <div class="address">台中市后里區安眉路133號</div>
         </div>
       </div>
-      <!-- <div id="address">
-              <div class="footer-contact-title"></div>
-              <div class="footer-contact-content" ></div>
-          </div> -->
-      <div id="time">
-        <div class="footer-contact-title">營業時間</div>
-        <div class="footer-contact-content">
-          <div>平日06：30 --13:30 </div>
-          <div class="footer-contact-content">假日08：00 --15:00</div>
-          <div class="footer-contact-content">(周一為公休日)</div>
-
+      <img src="./img/logo.png"  width="130px">
+      <div class="footer-right">
+        <div class="footer-right-1">
+          <i class="bi bi-clock"></i>
+          <div class="open">營業時間</div>
+        </div>
+        <div class="time">
+          <div class="weekdays">平日 06:30 -- 13:30</div>
+          <div class="weekend">假日 08:00 -- 15:00</div>
+          <div class="mon">(周一為公休日)</div>
         </div>
       </div>
-      <div id="copyright">
-        <div class="footer-contact-title">@版權</div>
-        <div class="footer-contact-content"></div>
       </div>
+     <div class="footer-bottom">
+      <div class="copyright">@版權</div>
     </div>
+   
+    
 
-  </div>
+
   </div>
 
 </body>
