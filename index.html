@@ -35,7 +35,6 @@
 
   #banner {
     width: 100%;
-    height: 60vw;
     object-fit: contain;
     display: flex;
     justify-content: center;
@@ -191,7 +190,7 @@ label {position: relative;
  
 nav {
       width: 100%;
-      height: 15vw;
+      height: 85px;
       display: flex;
       font-size: 30px;
       align-items: center;
@@ -215,9 +214,11 @@ nav {
 
     /*banner  */
     #banner img{
-      padding-top: 15%;
+      padding-top: 48px;
     }
 
+
+    /* 跑馬燈 */
     .marqee {
       margin-top: 5%;
 }
@@ -228,16 +229,21 @@ nav {
       width: 100%;
       height: 60vh;
       background-color: rgb(185, 204, 233);
+      display: flex;
+      align-items: center;
       background-image: url(./img/IMG_6009.JPG);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
       color: #fff;
     }
+
+    .text-box1{
+      max-width: 500px;
+    }
     .about-title1{
       font-size: 210%;
       line-height: 200%;
-      padding-top: 70px;
     }
     #text3{
       font-size: 120%;
@@ -322,15 +328,17 @@ nav {
     /* 380-1200周邊景點 */
 
     .title-text {
-      font-size: 30px;
+      font-size: 40px;
+      color: rgb(42, 91, 156);
     }
 
     #pic {
-      background-color: rgb(205, 217, 235);
+      background-color: rgb(207, 228, 255);
     }
 
     .attractions{
       text-align: center;
+      color: rgb(209, 119, 1);
     }
 
  
@@ -394,14 +402,13 @@ nav {
       align-items: center;
       font-size: 150%;
     }
-
+  
 
     /*footer */
     #footer{
       width: 100%;
-      background-color: rgb(145, 219, 253);
-      /* padding: 30px 500px; */
       background-image: url(./img/背景質感.jpg);
+      background-image:linear-gradient(to right,   rgba(255, 255, 255, 0),  rgb(170, 209, 244));
     }
     .footer-top{
       width: 150px;
@@ -483,7 +490,7 @@ nav {
 
 
 /* 當碰到nav變成漢堡條 */
- @media screen and (min-width: 1200px) {
+ @media screen and (min-width: 1280px) {
 
   label {
     display: none;
@@ -491,7 +498,7 @@ nav {
 
   nav {
       width: 100%;
-      height: 6vw;
+      height: 80px;
       display: flex;
       font-size: 30px;
       align-items: center;
@@ -591,8 +598,8 @@ nav {
 
 
     .text{
-      width: 50%;
-      height: 90vh;
+      /* width: 50%;
+      height: 90vh; */
       padding-left: 5%;
       display: flex;
       flex-direction: column;
@@ -602,8 +609,8 @@ nav {
     }
 
     .text-box{
-      width: 90%;
-      height: 80vh;
+      /* width: 90%;
+      height: 80vh; */
       padding: 5%;
       display: flex;
       flex-direction: column;}
@@ -626,7 +633,7 @@ nav {
 
 
 
-  /* 1200以上menu  */
+ 
     .menu {
       float: right;
       clear: none;
@@ -725,9 +732,8 @@ nav {
 
 
     /* 1200以上周邊景點 */
-
-
     .title-text {
+      text-align: center;
       font-size: 50px;
     }
 
@@ -808,9 +814,9 @@ nav {
   /* 1200以上的footer */
   #footer{
       width: 100%;
-      background-color: rgb(145, 219, 253);
       padding: 30px 500px;
       background-image: url(./img/背景質感.jpg);
+      background-image:linear-gradient(to right,   rgba(255, 255, 255, 0),  rgb(170, 209, 244));
     }
     .footer-top{
       width: 150px;
@@ -884,8 +890,9 @@ nav {
     }
 
 
-    .text{width: 50%;
-      height: 90vh;
+    .text{
+      /* width: 50%;
+      height: 90vh; */
       padding-left: 5%;
       display: flex;
       flex-direction: column;
@@ -894,8 +901,8 @@ nav {
 
 
     .text-box{
-      width: 90%;
-      height: 80vh;
+      /* width: 90%;
+      height: 80vh; */
       padding: 5%;
       background-color: aliceblue;
       display: flex;
@@ -1026,13 +1033,11 @@ nav {
   <div id="menu">
     
     <div class="left">
-      <div class="topic">
         <a href="#menu-sample">
           <img src="./img/menu.jpg"> 
           <p>MENU</p>
         </a>
-       
-      </div>
+      
 
       <a href="#menu" class="lightbox" id="menu-sample">
         <span style="background-image: url('./img/menu.jpg')">
@@ -1066,7 +1071,6 @@ nav {
       <!-- Initialize Swiper -->
       <script>
         var swiper = new Swiper(".mySwiper", {
-          spaceBetween: 30,
           centeredSlides: true,
           loop: true,
 
@@ -1098,7 +1102,7 @@ nav {
 
   <div id="attraction">
     <div class="title2">
-      <div class="title-text" >周邊景點</div>
+      <div class="title-text" style="text-align:center" >周邊景點</div>
     </div>
 
 
