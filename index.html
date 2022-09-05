@@ -35,7 +35,7 @@
 
   #banner {
     width: 100%;
-    height: 50vw;
+    height: 60vw;
     object-fit: contain;
     display: flex;
     justify-content: center;
@@ -43,17 +43,18 @@
     }
 
   #banner img{
-    width: 80%;
-    height: 80%;
-  } */
+    padding-top: 10%;
+    width: 100%;
+  } 
 
 
-  .header{
+  .header
+  {
       width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
-      box-shadow: 0px 1px 3px ;}
+    }
 
   .header::after {
     
@@ -95,15 +96,14 @@
   display: none;
 }
 
-input:checked ~ .menu {
+
+label:focus ~ .menu {
   display: block;
   max-height: 300px;
 }
-
 /* 漢堡按鈕 */
 label {position: relative;
   float: right;
-  padding-top: 50px;
   line-height: 50px;
   cursor: pointer;
 }
@@ -178,14 +178,9 @@ label {position: relative;
 
   .rest{
     width: 100%;
-    height: 10vh;
+    height: 5vh;
     background-color: #fff;   
   }
-
-
-
-
-
 
 
 
@@ -202,6 +197,7 @@ nav {
       align-items: center;
       background-image:linear-gradient(to right, rgb(72, 112, 146),  rgba(255, 255, 255, 0));
       position: fixed;
+      z-index: 99;
   }
 
   #logo {
@@ -210,17 +206,27 @@ nav {
    
   
     .fb {
-      left: 70%;
+      left: 60%;
     }
 
     .ig {
-      left:82%;
+      left:70%;
     }
+
+    /*banner  */
+    #banner img{
+      padding-top: 15%;
+    }
+
+    .marqee {
+      margin-top: 5%;
+}
+
 
 /* 380-1200的關於亮宅 */
   .about-img{
       width: 100%;
-      height: 80vh;
+      height: 60vh;
       background-color: rgb(185, 204, 233);
       background-image: url(./img/IMG_6009.JPG);
       background-position: center;
@@ -229,17 +235,18 @@ nav {
       color: #fff;
     }
     .about-title1{
-      font-size: 250%;
+      font-size: 210%;
       line-height: 200%;
       padding-top: 70px;
     }
     #text3{
-      font-size: 150%;
-      line-height: 200%;
+      font-size: 120%;
+      line-height: 150%;
     }
     #text4{
-      font-size: 150%;
-      line-height: 200%;
+      padding-top: 20px;
+      font-size: 120%;
+      line-height: 150%;
     }
     .text{
       display: none;
@@ -253,14 +260,19 @@ nav {
       position: absolute;
     
     }
-
     #menu {
-      height: 50vh;
+      height: 40vh;
+      background-image: url(./img/menu背景.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
     }
+ 
 
     #menu .left {
       float: left;
       position: relative;
+      padding-left: 0px;
+      
     }
 
     #menu .left p {
@@ -307,7 +319,7 @@ nav {
 
 
 
-    /* 周邊景點 */
+    /* 380-1200周邊景點 */
 
     .title-text {
       font-size: 30px;
@@ -315,9 +327,13 @@ nav {
 
     #pic {
       background-color: rgb(205, 217, 235);
-      font-size: 100%;
     }
 
+    .attractions{
+      text-align: center;
+    }
+
+ 
 
     .lightbox {
       /* Default to hidden */
@@ -379,10 +395,12 @@ nav {
       font-size: 150%;
     }
 
-    /* footer */
+
+    /*footer */
     #footer{
       width: 100%;
       background-color: rgb(145, 219, 253);
+      /* padding: 30px 500px; */
       background-image: url(./img/背景質感.jpg);
     }
     .footer-top{
@@ -411,6 +429,7 @@ nav {
     .footer-left-1{
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
     }
     .footer-left-2{
       display: flex;
@@ -421,7 +440,7 @@ nav {
       letter-spacing: 2px;
     }
     .number{
-      margin-left: 10px;
+      margin-left: 25px;
       letter-spacing: 3px;
     }
     .address{
@@ -455,7 +474,7 @@ nav {
     .copyright{
       text-align: center;
     }
-  
+
 }
     
 
@@ -514,6 +533,26 @@ nav {
     }
 
 
+
+
+  /* 1200banner */
+    #banner img{
+     padding: unset;
+     width: 90%;
+     height: 90%;
+    }
+
+
+
+
+  /* 跑馬燈 */
+  .marqee {
+    margin: unset;
+  }
+
+
+
+
   /* 1200以上關於亮宅 */
     .text-box1{
       display: none;
@@ -562,7 +601,6 @@ nav {
       color: rgb(213, 156, 121);
     }
 
-
     .text-box{
       width: 90%;
       height: 80vh;
@@ -586,6 +624,8 @@ nav {
 
 
 
+
+
   /* 1200以上menu  */
     .menu {
       float: right;
@@ -603,7 +643,7 @@ nav {
 
 
 
-      /* 菜單 */
+  /* 菜單 */
     .swiper {
       width: 100%;
       height: 100%;
@@ -648,7 +688,6 @@ nav {
       width: 90%;
       height: 90%;
       float: right;
-
     }
 
     #menu .swiper {
@@ -687,17 +726,12 @@ nav {
 
     /* 1200以上周邊景點 */
 
-    #attraction {
-      width: 100%;
-      height: 100vh;
-    }
 
     .title-text {
       font-size: 50px;
     }
 
     #pic {
-      height: 100vh;
       background-color: rgb(205, 217, 235);
       display: flex;
       flex-direction: unset;
@@ -705,7 +739,10 @@ nav {
       align-items: center;
       font-size: 150%;
     }
-
+    .attractions img{
+      width: 90%;
+      height: 90%;
+    }
 
     .lightbox {
       /* Default to hidden */
@@ -769,9 +806,10 @@ nav {
 
     
   /* 1200以上的footer */
-    #footer{
+  #footer{
       width: 100%;
-      background-image:linear-gradient(to right, rgb(72, 112, 146),  rgba(255, 255, 255, 0));
+      background-color: rgb(145, 219, 253);
+      padding: 30px 500px;
       background-image: url(./img/背景質感.jpg);
     }
     .footer-top{
@@ -844,37 +882,36 @@ nav {
     .copyright{
       text-align: center;
     }
-  
-  
-.text{
-  height: 90vh;
-  padding-left: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;}
 
 
-.text-box{
-  width: 90%;
-  height: 80vh;
-  padding: 5%;
-  background-color: aliceblue;
-  display: flex;
-  flex-direction: column;}
+    .text{width: 50%;
+      height: 90vh;
+      padding-left: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;}
 
-#text1{
-  font-size: 200%;
-  padding-bottom: 5%;
-  line-height: 200%;
-  letter-spacing: 5%;}
 
-#text2{
-  font-size: 200%;
-  line-height: 200%;
-  letter-spacing: 5%;
-  }
+    .text-box{
+      width: 90%;
+      height: 80vh;
+      padding: 5%;
+      background-color: aliceblue;
+      display: flex;
+      flex-direction: column;}
 
+    #text1{
+      font-size: 200%;
+      padding-bottom: 5%;
+      line-height: 200%;
+      letter-spacing: 5%;}
+
+    #text2{
+      font-size: 200%;
+      line-height: 200%;
+      letter-spacing: 5%;
+    }
   }
 
 
@@ -908,9 +945,9 @@ nav {
         <img src="./img/logo.png" style="width: 130px;height: 130px; ">
       </a>
     </div>
-    <label for="switch">☰</label>
+    <label for="switch" tabindex="1">☰</label>
     <input type="checkbox" id="switch">
-    <ul class="menu">
+    <ul class="menu" >
       <li><a href="#about" class="link">關於亮宅</a></li>
       <li><a href="#menu" class="link">最新菜單</a></li>
           <li><a href="#attraction" class="link">周邊景點</a></li>
@@ -925,8 +962,8 @@ nav {
   </nav>
 
 
-  <div id="banner" style="padding-top:10% ;">
-  <img src="./img/BANNER 加背景_工作區域 1.png" >
+  <div id="banner" style="padding-top:5% ;">
+  <img src="./img/banner 01.jpg" >
   </div>
   <div class="rest">
     <div class="marqee">
@@ -945,7 +982,8 @@ nav {
           <div class="about-img">
             <div class="text-box1"> 
               <div class="about-title1">關於亮宅</div>
-             <div  id="text3" data-aos="fade-right">
+             <div  id="text3" data-aos="fade-right"
+             data-aos-offset="200">
              「亮」取自於老闆的名字，「宅」則代表著家渴望建立起像家一樣隨性自由、舒適慵懶的空間。
              <br>
              「把夢想化為現實」是老闆的人生理念，也是一輩子追求的目標。</br>
@@ -1056,19 +1094,18 @@ nav {
 
 
 
-  <!-- p4 start -->
+  <!-- 周邊景點 start -->
 
   <div id="attraction">
     <div class="title2">
-      <div class="title-text" style="text-align: center;">周邊景點</div>
+      <div class="title-text" >周邊景點</div>
     </div>
 
 
     <div id="pic">
-      <div class="attractions">
+      <div class="attractions" style="align-items: center;">
         <a href="#img1">
-          <img class="pics" src="https://www.fullon-hotels.com.tw/upload/ad_fac_list/ym_twL_ad_fac_20H04_87ii9czb5v.jpg"
-            style="width: 600px;height: 500px;">
+          <img class="pics" src="https://www.fullon-hotels.com.tw/upload/ad_fac_list/ym_twL_ad_fac_20H04_87ii9czb5v.jpg" style="width: 400px;height: 400px;">
 
         </a>
         <span class="Official ">
@@ -1080,7 +1117,7 @@ nav {
         <a href="#img2">
           <img class="pics"
             src="https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/5722456/401456_991633.png"
-            style="width: 600px;height: 500px;">
+            style="width: 400px;height: 400px;">
 
         </a>
         <div class="Official ">
@@ -1091,7 +1128,7 @@ nav {
       <div class="attractions">
         <a href="#img3">
           <img class="pics" src="https://www.taisugar.com.tw/upload/RelPic/Attractions/205/636605282207567010.jpg"
-            style="width: 600px;height: 500px;">
+          style="width: 400px;height: 400px;">
 
         </a>
         <span class="Official ">
@@ -1105,8 +1142,6 @@ nav {
 
     <a href="#attraction" class="lightbox" id="img1">
       <span style="background-image: url('./麗寶.jpg')">
-
-
 
       </span>
 
@@ -1125,7 +1160,7 @@ nav {
   </div>
   </div>
 
-<!-- <div class="rest"></div> -->
+<div class="rest"></div>
 
 
   <!-- footer start -->
