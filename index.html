@@ -35,7 +35,6 @@
 
   #banner {
     width: 100%;
-    height: 60vw;
     object-fit: contain;
     display: flex;
     justify-content: center;
@@ -49,7 +48,7 @@
 
 
   .header
-  {
+   {
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -102,14 +101,17 @@ label:focus ~ .menu {
   max-height: 300px;
 }
 /* 漢堡按鈕 */
-label {position: relative;
+label {
+  position: relative;
   float: right;
   line-height: 50px;
   cursor: pointer;
 }
 
+
+/* 跑馬燈 */
 .marqee {
-	height: 5em;
+  height: 40px;
 	margin: 0 auto;
 	overflow: hidden; 
 	position: relative;
@@ -127,7 +129,7 @@ label {position: relative;
 	white-space: nowrap;
 	font-weight: lighter;
   font-size: 25px;
-	color:gray;
+	color:rgb(255, 254, 253);
 }
 
 
@@ -135,11 +137,13 @@ label {position: relative;
 	0% {
 		left: 100%;
 		transform: translateX(0%);
+    background-color:  rgb(206, 158, 128);
 	}
 
 	100% {
 		left: 0;
 		transform: translateX(-100%);
+    background-color: rgb(206, 158, 128);
 	}
 }
 
@@ -178,7 +182,7 @@ label {position: relative;
 
   .rest{
     width: 100%;
-    height: 5vh;
+    height: 40px;
     background-color: #fff;   
   }
 
@@ -191,7 +195,7 @@ label {position: relative;
  
 nav {
       width: 100%;
-      height: 15vw;
+      height: 75px;
       display: flex;
       font-size: 30px;
       align-items: center;
@@ -215,37 +219,43 @@ nav {
 
     /*banner  */
     #banner img{
-      padding-top: 15%;
+      padding-top: 48px;
     }
 
+
+    /* 跑馬燈 */
     .marqee {
-      margin-top: 5%;
+      margin-top: 8px;
 }
 
 
 /* 380-1200的關於亮宅 */
   .about-img{
       width: 100%;
-      height: 60vh;
+      height: 50vh;
       background-color: rgb(185, 204, 233);
+      display: flex;
+      align-items: center;
       background-image: url(./img/IMG_6009.JPG);
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       color: #fff;
+      padding: 0 50px;
     }
+
     .about-title1{
-      font-size: 210%;
+      text-align: center;
+      font-size: 200%;
       line-height: 200%;
-      padding-top: 70px;
     }
     #text3{
-      font-size: 120%;
+      font-size: 100%;
       line-height: 150%;
     }
     #text4{
-      padding-top: 20px;
-      font-size: 120%;
+      padding-top: 15px;
+      font-size: 100%;
       line-height: 150%;
     }
     .text{
@@ -322,15 +332,17 @@ nav {
     /* 380-1200周邊景點 */
 
     .title-text {
-      font-size: 30px;
+      font-size: 40px;
+      color: rgb(42, 91, 156);
     }
 
     #pic {
-      background-color: rgb(205, 217, 235);
+      background-color: rgb(207, 228, 255);
     }
 
     .attractions{
       text-align: center;
+      color: rgb(209, 119, 1);
     }
 
  
@@ -394,14 +406,13 @@ nav {
       align-items: center;
       font-size: 150%;
     }
-
+  
 
     /*footer */
     #footer{
       width: 100%;
-      background-color: rgb(145, 219, 253);
-      /* padding: 30px 500px; */
       background-image: url(./img/背景質感.jpg);
+      background-image:linear-gradient(to right,   rgba(255, 255, 255, 0),  rgb(170, 209, 244));
     }
     .footer-top{
       width: 150px;
@@ -478,12 +489,75 @@ nav {
 }
     
 
+
+@media screen and (min-width:800px) {
+    
+
+
+  .text-box1{
+      display: none;
+    }
+    
+    #about{
+      width: 100%;
+       
+    }
+    .about-title{
+      font-size: 300%;
+      text-align: center;
+      width: 100%;
+    }
+
+    .about-content{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .about-img{
+      height: unset;
+      background-image: url(./img/IMG_6009.JPG);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+    }
+
+    .text{
+      height: 80vh; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: rgb(213, 156, 121);
+      background-color: aliceblue;
+      padding: 0 50px;
+    }
+
+
+    #text1{
+      font-size: 150%;
+      padding-bottom: 5%;
+      line-height: 200%;
+      letter-spacing: 5%;
+    }
+
+    #text2{
+      font-size: 150%;
+      line-height: 200%;
+      letter-spacing: 5%;
+    }
+
+
+  
+}
+
   
 
 
 
 /* 當碰到nav變成漢堡條 */
- @media screen and (min-width: 1200px) {
+ @media screen and (min-width: 1280px) {
 
   label {
     display: none;
@@ -491,7 +565,7 @@ nav {
 
   nav {
       width: 100%;
-      height: 6vw;
+      height: 80px;
       display: flex;
       font-size: 30px;
       align-items: center;
@@ -546,8 +620,9 @@ nav {
 
 
   /* 跑馬燈 */
-  .marqee {
-    margin: unset;
+    .marqee {
+     margin: unset;
+     margin-top: 8px;
   }
 
 
@@ -557,33 +632,28 @@ nav {
     .text-box1{
       display: none;
     }
+    
     #about{
       width: 100%;
-      height: 100vh;
+       
     }
-
     .about-title{
       font-size: 400%;
       text-align: center;
       width: 100%;
-      height: 10vh;
     }
 
     .about-content{
       width: 100%;
-      height: 90vh;
       display: flex;
       flex-direction: row;
     }
 
     .about-img{
-      padding-top: 4.5%;
-      padding-left: 2%;
-      width: 50%;
-      height: 80vh;
+      height: unset;
       background-image: url(./img/IMG_6009.JPG);
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
 
     }
@@ -591,9 +661,7 @@ nav {
 
 
     .text{
-      width: 50%;
-      height: 90vh;
-      padding-left: 5%;
+      height: 80vh; 
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -602,9 +670,6 @@ nav {
     }
 
     .text-box{
-      width: 90%;
-      height: 80vh;
-      padding: 5%;
       display: flex;
       flex-direction: column;}
 
@@ -626,7 +691,7 @@ nav {
 
 
 
-  /* 1200以上menu  */
+ 
     .menu {
       float: right;
       clear: none;
@@ -725,9 +790,8 @@ nav {
 
 
     /* 1200以上周邊景點 */
-
-
     .title-text {
+      text-align: center;
       font-size: 50px;
     }
 
@@ -808,9 +872,9 @@ nav {
   /* 1200以上的footer */
   #footer{
       width: 100%;
-      background-color: rgb(145, 219, 253);
       padding: 30px 500px;
       background-image: url(./img/背景質感.jpg);
+      background-image:linear-gradient(to right,   rgba(255, 255, 255, 0),  rgb(170, 209, 244));
     }
     .footer-top{
       width: 150px;
@@ -884,9 +948,7 @@ nav {
     }
 
 
-    .text{width: 50%;
-      height: 90vh;
-      padding-left: 5%;
+    .text{
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -894,9 +956,6 @@ nav {
 
 
     .text-box{
-      width: 90%;
-      height: 80vh;
-      padding: 5%;
       background-color: aliceblue;
       display: flex;
       flex-direction: column;}
@@ -966,9 +1025,10 @@ nav {
   <img src="./img/banner 01.jpg" >
   </div>
   <div class="rest">
-    <div class="marqee">
+    <div class="marqee" >
 			<ul>
 				<li>最新消息:亮宅即將開啟新活動，也會有中秋檔期活動，敬啟期待</li>
+       
 			</ul>
 		</div>
   </div>
@@ -1026,13 +1086,11 @@ nav {
   <div id="menu">
     
     <div class="left">
-      <div class="topic">
         <a href="#menu-sample">
           <img src="./img/menu.jpg"> 
           <p>MENU</p>
         </a>
-       
-      </div>
+      
 
       <a href="#menu" class="lightbox" id="menu-sample">
         <span style="background-image: url('./img/menu.jpg')">
@@ -1066,7 +1124,6 @@ nav {
       <!-- Initialize Swiper -->
       <script>
         var swiper = new Swiper(".mySwiper", {
-          spaceBetween: 30,
           centeredSlides: true,
           loop: true,
 
@@ -1098,7 +1155,7 @@ nav {
 
   <div id="attraction">
     <div class="title2">
-      <div class="title-text" >周邊景點</div>
+      <div class="title-text" style="text-align:center" >周邊景點</div>
     </div>
 
 
